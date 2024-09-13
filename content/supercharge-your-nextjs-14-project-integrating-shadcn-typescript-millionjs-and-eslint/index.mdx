@@ -1,0 +1,79 @@
+---
+title: "Supercharge Your Next.js 14 Project: Integrating Shadcn/UI, TypeScript, Million.js, and ESLint with Bun"
+description: Learn how to set up Next.js 14 with Shadcn/UI, TypeScript, Million.js, and ESLint using Bun for a streamlined development experience.
+image: "../../public/blogs/supercharge-nextjs.jpg"
+publishedAt: "2024-08-20"
+updatedAt: "2024-08-20"
+author: "Faiz Khan"
+isPublished: true
+tags:
+  - Next.js
+  - Shadcn
+  - TypeScript
+  - Million.js
+  - Bun
+---
+
+Next.js 14 is out, and it brings a host of new features and performance improvements. But why stop there? By combining Next.js 14 with Shadcn/UI, TypeScript, Million.js, and ESLint, you can supercharge your development experience even further. In this guide, we'll walk you through setting up these powerful tools using Bun, a fast and modern JavaScript runtime.
+
+## Step 1: Setting Up Your Next.js 14 Project with Bun
+
+First things first, let's create a new Next.js 14 project using Bun.
+
+```bash
+bun x create-next-app@latest
+
+cd my-app
+```
+
+This will set up a new Next.js 14 project with all the dependencies you need.
+
+## Step 2: Integrating Shadcn/UI for Elegant Components
+
+Shadcn/UI is a powerful and versatile component library that pairs perfectly with Next.js and TypeScript. To add Shadcn/UI to your project, start by running:
+
+```bash
+bun x shadcn@latest init
+```
+
+This command will initialize Shadcn/UI in your project. You’ll be prompted to configure `components.json`:
+
+- **Style**: Choose your preferred style (e.g., New York).
+- **Base Color**: Select a base color (e.g., Zinc).
+- **CSS Variables**: Decide whether to use CSS variables for colors.
+
+Once configured, you can start adding components to your project. For example, to add a Button component, run:
+
+```bash
+bun x shadcn@latest add button
+```
+
+Then, import and use the component like so:
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+export default function Home() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
+}
+```
+
+Shadcn/UI's components are fully typed, ensuring a seamless development experience with TypeScript.
+
+## Step 3: Setting Up Million Lint for Code Optimization
+
+Million Lint is a VSCode extension that helps you optimize your React code by highlighting and fixing performance issues. To get started, install Million Lint via the CLI:
+
+```bash
+bun x million@latest
+```
+
+During the installation, you'll be prompted to install the Million Lint build plugin and the VSCode extension. Once set up, you'll receive suggestions to optimize your code automatically.
+
+## Conclusion
+
+By combining Next.js 14 with Shadcn/UI, TypeScript, Million.js, Million Lint, and ESLint, you've created a powerhouse development environment that's both fast and efficient. Using Bun as your runtime and package manager ensures that your setup is lightning-quick and hassle-free. Happy coding!
